@@ -1,0 +1,128 @@
+.avance-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: rgba(22,36,48,0.92);
+  box-shadow: -4px 0 32px #00c9a799, 0 2px 18px #0005;
+  backdrop-filter: blur(10px) saturate(1.2);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  z-index: 2300;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.13em;
+  font-weight: 500;
+  color: #fff;
+  transition: right 0.5s cubic-bezier(.7,0,.3,1);
+  animation: avanceIn 0.5s cubic-bezier(.7,0,.3,1);
+}
+.avance-drawer.closed {
+  right: -282px;
+  box-shadow: none;
+  padding-right: 0;
+}
+.avance-drawer .avance-toggle {
+  position: absolute;
+  top: 50%;
+  left: -32px;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.82);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px #00c9a7bb, 0 0 0 2px #fff8;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2400;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  color: #1976d2;
+  outline: none;
+}
+.avance-drawer .avance-toggle:hover {
+  background: #00c9a7;
+  color: #fff;
+  box-shadow: 0 4px 24px #00c9a7cc, 0 0 0 2px #00c9a7bb;
+}
+.avance-drawer.closed .avance-toggle {
+  left: -44px;
+  background: rgba(255,255,255,0.93);
+  color: #1976d2;
+  box-shadow: 0 2px 12px #00c9a7aa;
+}
+
+@keyframes avanceIn {
+  from { right: -340px; opacity: 0; }
+  to   { right: 0; opacity: 1; }
+}
+.avance-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.avance-header-title {
+  font-weight: 900;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  color: #00c9a7;
+  text-shadow: 0 2px 10px #00c9a799;
+}
+.avance-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.avance-close:hover {
+  opacity: 1;
+}
+.avance-icons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.avance-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.18em;
+}
+.avance-icon svg {
+  filter: drop-shadow(0 2px 8px #00c9a7cc);
+}
+.avance-bar-container {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  width: 100%;
+  background: #1d2b37;
+  border-radius: 12px;
+  height: 18px;
+  box-shadow: 0 2px 10px #00c9a744;
+  overflow: hidden;
+}
+.avance-bar {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#00e676 0%,#00c9a7 60%,#00b4db 100%);
+  box-shadow: 0 2px 12px #00c9a7cc;
+  transition: width 0.6s cubic-bezier(.7,0,.3,1);
+}
+.avance-bar-label {
+  text-align: right;
+  font-size: 1.05em;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 3px;
+}

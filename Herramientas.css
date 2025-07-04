@@ -1,0 +1,62 @@
+.bloque-herramientas {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.bloque-herramientas h2 {
+  color: #2d3a4a;
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.pregunta-bloque {
+  margin-bottom: 2rem;
+}
+.pregunta-texto {
+  margin-bottom: 0.5rem;
+}
+.normativa {
+  display: block;
+  color: #4a6fa5;
+  font-size: 0.97rem;
+  margin-top: 0.2rem;
+}
+.opciones label {
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+input[type="text"].observaciones {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #b6c2d1;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.error {
+  color: #b91c1c;
+  background: #ffeaea;
+  border: 1px solid #fbb;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.guardar-btn {
+  background: #2d3a4a;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+.guardar-btn:hover {
+  background: #4a6fa5;
+}

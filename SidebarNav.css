@@ -1,0 +1,51 @@
+.sidebar-nav {
+  width: 260px;
+  background: #1d2733;
+  color: #fff;
+  min-height: 100vh;
+  padding: 0 0 40px 0;
+  box-shadow: 2px 0 12px #0001;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-title {
+  font-size: 1.18em;
+  font-weight: bold;
+  padding: 20px 24px 12px 24px;
+  background: #20344c;
+  border-bottom: 1px solid #26354a;
+  color: #e7eaf2;
+  letter-spacing: 0.5px;
+}
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background 0.15s, border 0.15s;
+  font-size: 1em;
+}
+.nav-item:hover, .nav-item.nav-activa {
+  background: #2b3d53;
+  border-left: 4px solid #00b6e0;
+}
+.nav-item.completa {
+  background: #183c2f;
+  color: #8fffc2;
+}
+.nav-icon {
+  width: 32px;
+  text-align: center;
+  font-size: 1.2em;
+}
+.nav-label {
+  flex: 1;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+}

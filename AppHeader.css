@@ -1,0 +1,48 @@
+/* Header futurista con glassmorphism y degradado */
+.header-futurista {
+  display: flex;
+  align-items: center;
+  padding: 22px 44px 18px 44px;
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 45%, #00c9a7 100%);
+  box-shadow: 0 4px 22px #0003;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  position: relative;
+  z-index: 100;
+  backdrop-filter: blur(8px) saturate(1.2);
+}
+.header-logo {
+  height: 64px;
+  width: 64px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 2px 18px #00c9a7aa, 0 0 0 4px #fff4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 38px;
+  overflow: visible;
+  border: 1.5px solid #fff8;
+  backdrop-filter: blur(3px) saturate(1.1);
+}
+.header-logo img {
+  height: 54px;
+  width: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px #00c9a7cc);
+  background: transparent;
+}
+.header-logo img {
+  height: 46px;
+  width: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px #00c9a7cc);
+}
+.header-titulo {
+  font-family: 'Montserrat', 'Poppins', 'Orbitron', Arial, sans-serif;
+  font-size: 2.3em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 12px #00c9a7bb, 0 1px 0 #222a;
+}

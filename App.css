@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+.container {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #232526 0%, #0f2027 40%, #00c9a7 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #20344c;
+}

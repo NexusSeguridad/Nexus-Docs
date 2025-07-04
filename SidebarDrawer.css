@@ -1,0 +1,186 @@
+.sidebar-drawer-toggle {
+  position: fixed;
+  top: 80px;
+  left: 18px;
+  background: rgba(255,255,255,0.13);
+  color: #1a2e45;
+  border: none;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 2.1em;
+  z-index: 2200;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #00c9a7aa;
+  transition: box-shadow 0.18s, background 0.18s, color 0.18s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-drawer-toggle:hover {
+  background: rgba(0,201,167,0.15);
+  color: #00c9a7;
+  box-shadow: 0 4px 24px #00c9a7cc, 0 0 0 2px #00c9a7bb;
+}
+
+.sidebar-drawer-close {
+  align-self: flex-end;
+  font-size: 2em;
+  color: #1976d2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 16px 0 0;
+  transition: color 0.18s;
+}
+.sidebar-drawer-close:hover {
+  color: #00c9a7;
+}
+
+.sidebar-secciones-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 0 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.sidebar-seccion-item {
+  margin: 0 0 6px 0;
+  padding: 0;
+}
+.sidebar-seccion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #20344c;
+  font-size: 1.08em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  padding: 14px 30px 14px 24px;
+  text-align: left;
+  border-radius: 12px 30px 30px 12px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+}
+.sidebar-seccion-btn:hover {
+  background: linear-gradient(90deg, #e0f7fa 0%, #b2ebf2 100%);
+  color: #1976d2;
+  box-shadow: 0 2px 12px #00c9a722;
+}
+.sidebar-seccion-item.activa .sidebar-seccion-btn {
+  background: linear-gradient(90deg, #00c9a7 0%, #2c5364 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px #00c9a7cc;
+  font-weight: 700;
+}
+.sidebar-seccion-item.completa .sidebar-seccion-btn {
+  background: linear-gradient(90deg, #b2ffb2 0%, #e0ffe0 100%);
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+.sidebar-seccion-label {
+  font-size: 1em;
+  letter-spacing: 0.01em;
+}
+
+.sidebar-overlay {
+  background: rgba(44,63,94,0.16);
+  transition: background 0.25s;
+  cursor: pointer;
+}
+
+/* Scrollbar elegante */
+.sidebar-secciones-list::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.sidebar-secciones-list::-webkit-scrollbar-thumb {
+  background: #b2ebf2;
+  border-radius: 5px;
+}
+
+
+.sidebar-drawer {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  height: calc(100vh - 80px);
+  width: 310px;
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 8px 32px #00c9a7cc, 0 2px 24px #2c536488;
+  z-index: 2300;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  padding: 18px 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+  animation: slideInDrawer 0.33s cubic-bezier(.7,0,.3,1);
+  backdrop-filter: blur(8px) saturate(1.2);
+}
+@keyframes slideInDrawer {
+  from { transform: translateX(-70px); opacity: 0.2; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+.sidebar-drawer.open {
+  transform: none;
+}
+
+.sidebar-drawer .sidebar-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 22px 20px 12px 22px;
+  color: #2d3a4a;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-drawer ul {
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+.sidebar-drawer .nav-item {
+  padding: 13px 22px;
+  cursor: pointer;
+  font-size: 1.07em;
+  color: #2d3a4a;
+  border-left: 4px solid transparent;
+  transition: background 0.13s, border-color 0.13s;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.sidebar-drawer .nav-item.nav-activa {
+  background: #e3eefd;
+  border-left: 4px solid #1976d2;
+  color: #1976d2;
+}
+.sidebar-drawer .nav-item.completa {
+  color: #388e3c;
+}
+.sidebar-drawer .nav-item.actual {
+  font-weight: bold;
+}
+.sidebar-drawer .nav-icon {
+  font-size: 1.16em;
+}
+
+.sidebar-drawer-close {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #2d3a4a;
+  cursor: pointer;
+}
